@@ -22,7 +22,7 @@ Simular um ambiente real de desenvolvimento, com divisão de tarefas por branchs
 
 - **HTML5:** Estrutura semântica das páginas, incluindo a tela inicial e a tela de jogo.
 
-- **CSS3:** Estilização responsiva e acessível, com atenção à legibilidade, contraste e navegação por teclado.
+- **CSS:** Estilização responsiva e acessível, com atenção à legibilidade, contraste e navegação por teclado.
 
 - **JavaScript:** Lógica do jogo, manipulação do DOM, armazenamento local e requisição completa.
 
