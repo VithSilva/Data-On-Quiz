@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "pergunta": "O que caracteriza o conceito de independência programa-dados nos Sistemas de Gerenciamento de Banco de Dados (SGBD)?",
+      "opcoes": [
+        "A) A capacidade de alterar o código dos programas de aplicação sem afetar o hardware onde o banco de dados está instalado.",
+        "B) A capacidade de manter a estrutura e a definição dos dados armazenadas no catálogo do SGBD separadamente do código dos programas, permitindo alterar a estrutura física dos dados sem requerer modificações nos programas de aplicação.",
+        "C) A exigência de que as definições de todos os tipos de dados fiquem codificadas diretamente dentro do código-fonte de cada programa.",
+        "D) O mecanismo de controle de concorrência que impede que múltiplos usuários leiam o mesmo arquivo de dados simultaneamente."
+      ],
+      "respostaCorreta": 1,
+      "dica": "Lembre-se de onde fica mantida a definição dos dados no ambiente SGBD — se fica embutida no código-fonte dos programas ou centralizada no catálogo do sistema.",
+      "explicacao": "No processamento tradicional de arquivos, a estrutura ficava presa a cada programa. No SGBD, a estrutura dos arquivos é salva no catálogo (metadados) de forma independente.",
+      "fonte": "Sistema de Banco de Dados (Navathe & Elmasri)"
+    },
+    {
+      "id": 2,
+      "pergunta": "No âmbito dos bancos de dados NoSQL orientados a grafos, qual é a linguagem de consulta declarativa utilizada pelo Neo4j e em qual linguagem tradicional de banco de dados ela se inspira para suas palavras-chave?",
+      "opcoes": [
+        "A) Linguagem SPARQL, inspirada em C++.",
+        "B) Linguagem Gremlin, inspirada no modelo hierárquico.",
+        "C) Linguagem Cypher, inspirada na SQL.",
+        "D) Linguagem CQL (Cassandra Query Language), inspirada em XML."
+      ],
+      "respostaCorreta": 2,
+      "dica": "O nome dessa linguagem lembra a palavra 'cifra' em inglês e utiliza cláusulas familiares de bancos relacionais (como WHERE e ORDER BY).",
+      "explicacao": "O Neo4j utiliza a linguagem declarativa Cypher, cujas palavras-chave e cláusulas foram inspiradas na SQL.",
+      "fonte": "Modelagem de Dados NoSQL: Uma Modelagem de Banco de Dados de Grafos para Persistência de Dados de Pesquisa"
+    },
+    {
+      "id": 3,
+      "pergunta": "Qual restrição do modelo relacional garante a consistência entre tabelas ao assegurar que uma tupla em uma relação, ao fazer referência a outra tabela, refira-se a um registro realmente existente (ou possua valor nulo)?",
+      "opcoes": [
+        "A) Restrição de Integridade de Entidade.",
+        "B) Restrição de Integridade Referencial.",
+        "C) Restrição de Domínio.",
+        "D) Restrição de Independência Física de Dados."
+      ],
+      "respostaCorreta": 1,
+      "dica": "Pense na regra do modelo relacional que governa diretamente o relacionamento mantido por meio de chaves estrangeiras (foreign keys).",
+      "explicacao": "A integridade referencial assegura a consistência das conexões entre tabelas, garantindo que valores de chaves estrangeiras apontem obrigatoriamente para chaves primárias existentes.",
+      "fonte": "Sistema de Banco de Dados (Navathe & Elmasri)"
+    }
+]
