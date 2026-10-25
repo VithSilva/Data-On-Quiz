@@ -199,7 +199,6 @@ button#proximo:disabled {
   display: none !important;
 }
 
-/* Layout do Topo no Quiz */
 .topo-quiz {
   display: flex;
   align-items: center;
@@ -226,7 +225,6 @@ button#proximo:disabled {
   background: var(--opcao-hover);
 }
 
-/* Área de Ranking */
 #area-ranking {
   background: var(--barra);
   border-radius: 8px;
