@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo - Data On'Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="topo-quiz">
+      <a href="index.html" class="botao-voltar">← Início</a>
+      <p id="posicao">Carregando...</p>
+    </div>
+
+    <div id="card">
+      <h2 id="pergunta"></h2>
+    </div>
+
+    <!-- Área da Dica -->
+    <div id="area-dica">
+      <button id="btn-dica" type="button" class="botao-dica">💡 Ver Dica</button>
+      <p id="texto-dica" class="texto-dica escondido"></p>
+    </div>
+
+    <ul id="opcoes"></ul>
+
+    <div id="feedback" role="status" aria-live="polite"></div>
+
+    <!-- Área de Ranking da Sessão -->
+    <div id="area-ranking" class="escondido">
+      <h3>Ranking geral</h3>
+      <ol id="lista-ranking"></ol>
+    </div>
+
+    <div id="acoes">
+      <button id="proximo" type="button" disabled>Próxima</button>
+    </div>
+  </main>
+</body>
+</html>

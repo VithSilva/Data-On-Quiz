@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Data On'Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Data On'Quiz</h1>
+    <p class="descricao">Teste seus conhecimentos na área de Dados: bancos de dados relacionais, NoSQL, modelagem e muito mais. Responda às perguntas, veja explicações e acompanhe sua pontuação.</p>
+    
+    <form id="formInicio" class="form-inicio">
+      <label for="nomeJogador" class="label-nome">Digite seu nome para iniciar:</label>
+      <input type="text" id="nomeJogador" class="input-nome" placeholder="Ex: Vithor" required>
+      <button type="submit" class="botao">Começar o quiz</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('formInicio').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nome = document.getElementById('nomeJogador').value.trim();
+      if (nome) {
+        sessionStorage.setItem('nomeJogador', nome);
+        window.location.href = 'quiz.html';
+      }
+    });
+  </script>
+</body>
+</html>
