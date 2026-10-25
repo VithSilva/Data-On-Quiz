@@ -30,7 +30,6 @@ function mostrarPergunta() {
   $('posicao').textContent = `${nomeJogador} — Pergunta ${atual + 1} de ${perguntas.length}`;
   $('pergunta').textContent = p.pergunta;
 
-  // Reseta estado da dica
   const btnDica = $('btn-dica');
   const textoDica = $('texto-dica');
   btnDica.style.display = 'inline-block';
@@ -56,7 +55,6 @@ function mostrarPergunta() {
   $('proximo').textContent = atual === perguntas.length - 1 ? 'Ver resultado' : 'Próxima';
 }
 
-// Evento da dica
 $('btn-dica').addEventListener('click', () => {
   $('texto-dica').classList.toggle('escondido');
 });
@@ -124,29 +122,22 @@ function proxima() {
 }
 
 function salvarERenderizarRanking() {
-  // 1. Recupera o ranking salvo no sessionStorage
   let ranking = JSON.parse(sessionStorage.getItem('rankingQuiz')) || [];
   
-  // 2. Procura se o jogador atual já existe no ranking
   const jogadorExistente = ranking.find((item) => item.nome === nomeJogador);
 
   if (jogadorExistente) {
-    // Se o jogador já jogou nesta sessão, atualiza apenas se a nova pontuação for maior
     if (acertos > jogadorExistente.pontuacao) {
       jogadorExistente.pontuacao = acertos;
     }
   } else {
-    // Se é a primeira vez do jogador na sessão, adiciona um novo registro
     ranking.push({ nome: nomeJogador, pontuacao: acertos, total: perguntas.length });
   }
   
-  // 3. Ordena o ranking por maior pontuação
   ranking.sort((a, b) => b.pontuacao - a.pontuacao);
   
-  // 4. Salva o ranking atualizado no sessionStorage
   sessionStorage.setItem('rankingQuiz', JSON.stringify(ranking));
 
-  // 5. Renderiza a lista de ranking na tela
   const lista = $('lista-ranking');
   lista.innerHTML = '';
   ranking.forEach((item) => {
@@ -171,21 +162,17 @@ function mostrarResultado() {
   const botao = $('proximo');
   botao.textContent = 'Jogar de novo';
   
-  // Limpa ouvintes antigos
   const novoBotao = botao.cloneNode(true);
   $('acoes').replaceChild(novoBotao, botao);
 
   novoBotao.onclick = () => {
-    // 1. Reseta as variáveis do jogo
     atual = 0;
     acertos = 0;
     respondida = false;
-    
-    // 2. Restaura a exibição e adiciona o evento original de 'proxima'
+
     $('area-ranking').classList.add('escondido');
     $('area-dica').style.display = 'block';
     
-    // 3. Volta o evento padrão do botão para navegar entre perguntas
     novoBotao.onclick = proxima;
     
     mostrarPergunta();
