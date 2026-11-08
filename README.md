@@ -52,8 +52,6 @@ O **Data On'Quiz** foi pensado para ser funcional, acessível e com bom desempen
 
 👤| **Enzo Moraes de Sousa**
 
-👤| **Esther Costa**
-
 👤| **Gerdson Luiz Felix Oliveira**
 
 👤| **João Vitor Oliveira da Silva**
