@@ -11,7 +11,8 @@
       "respostaCorreta": 1,
       "dica": "Lembre-se de onde fica mantida a definição dos dados no ambiente SGBD — se fica embutida no código-fonte dos programas ou centralizada no catálogo do sistema.",
       "explicacao": "No processamento tradicional de arquivos, a estrutura ficava presa a cada programa. No SGBD, a estrutura dos arquivos é salva no catálogo (metadados) de forma independente.",
-      "fonte": "Sistema de Banco de Dados (Navathe & Elmasri)"
+      "fonte": "Sistema de Banco de Dados (Navathe & Elmasri)",
+      "urlFonte": "https://www.kufunda.net/publicdocs/Sistemas%20de%20Banco%20de%20Dados%20(Ramez%20Elmasri,%20Shamkant%20B.%20Navathe).pdf"
     },
     {
       "id": 2,
@@ -25,7 +26,8 @@
       "respostaCorreta": 2,
       "dica": "O nome dessa linguagem lembra a palavra 'cifra' em inglês e utiliza cláusulas familiares de bancos relacionais (como WHERE e ORDER BY).",
       "explicacao": "O Neo4j utiliza a linguagem declarativa Cypher, cujas palavras-chave e cláusulas foram inspiradas na SQL.",
-      "fonte": "Modelagem de Dados NoSQL: Uma Modelagem de Banco de Dados de Grafos para Persistência de Dados de Pesquisa"
+      "fonte": "Modelagem de Dados NoSQL: Uma Modelagem de Banco de Dados de Grafos para Persistência de Dados de Pesquisa",
+      "urlFonte": "https://journals-sol.sbc.org.br/index.php/reic/article/view/4796"
     },
     {
       "id": 3,
@@ -39,6 +41,7 @@
       "respostaCorreta": 1,
       "dica": "Pense na regra do modelo relacional que governa diretamente o relacionamento mantido por meio de chaves estrangeiras (foreign keys).",
       "explicacao": "A integridade referencial assegura a consistência das conexões entre tabelas, garantindo que valores de chaves estrangeiras apontem obrigatoriamente para chaves primárias existentes.",
-      "fonte": "Sistema de Banco de Dados (Navathe & Elmasri)"
+      "fonte": "Sistema de Banco de Dados (Navathe & Elmasri)",
+      "urlFonte": "https://www.kufunda.net/publicdocs/Sistemas%20de%20Banco%20de%20Dados%20(Ramez%20Elmasri,%20Shamkant%20B.%20Navathe).pdf"
     }
 ]

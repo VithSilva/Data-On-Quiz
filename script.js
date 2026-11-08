@@ -106,7 +106,18 @@ function responder(escolhida) {
 
   const fonte = document.createElement('p');
   fonte.className = 'fonte';
-  fonte.textContent = 'Fonte: ' + p.fonte;
+  
+  if (p.urlFonte) {
+    const link = document.createElement('a');
+    link.href = p.urlFonte;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = p.fonte;
+    fonte.textContent = 'Fonte: ';
+    fonte.appendChild(link);
+  } else {
+    fonte.textContent = 'Fonte: ' + p.fonte;
+  }
 
   f.append(status, explicacao, fonte);
   $('proximo').disabled = false;
