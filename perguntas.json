@@ -1,47 +1,152 @@
 [
-    {
-      "id": 1,
-      "pergunta": "O que caracteriza o conceito de independência programa-dados nos Sistemas de Gerenciamento de Banco de Dados (SGBD)?",
-      "opcoes": [
-        "A) A capacidade de alterar o código dos programas de aplicação sem afetar o hardware onde o banco de dados está instalado.",
-        "B) A capacidade de manter a estrutura e a definição dos dados armazenadas no catálogo do SGBD separadamente do código dos programas, permitindo alterar a estrutura física dos dados sem requerer modificações nos programas de aplicação.",
-        "C) A exigência de que as definições de todos os tipos de dados fiquem codificadas diretamente dentro do código-fonte de cada programa.",
-        "D) O mecanismo de controle de concorrência que impede que múltiplos usuários leiam o mesmo arquivo de dados simultaneamente."
-      ],
-      "respostaCorreta": 1,
-      "dica": "Lembre-se de onde fica mantida a definição dos dados no ambiente SGBD — se fica embutida no código-fonte dos programas ou centralizada no catálogo do sistema.",
-      "explicacao": "No processamento tradicional de arquivos, a estrutura ficava presa a cada programa. No SGBD, a estrutura dos arquivos é salva no catálogo (metadados) de forma independente.",
-      "fonte": "Sistema de Banco de Dados (Navathe & Elmasri)",
-      "urlFonte": "https://www.kufunda.net/publicdocs/Sistemas%20de%20Banco%20de%20Dados%20(Ramez%20Elmasri,%20Shamkant%20B.%20Navathe).pdf"
-    },
-    {
-      "id": 2,
-      "pergunta": "No âmbito dos bancos de dados NoSQL orientados a grafos, qual é a linguagem de consulta declarativa utilizada pelo Neo4j e em qual linguagem tradicional de banco de dados ela se inspira para suas palavras-chave?",
-      "opcoes": [
-        "A) Linguagem SPARQL, inspirada em C++.",
-        "B) Linguagem Gremlin, inspirada no modelo hierárquico.",
-        "C) Linguagem Cypher, inspirada na SQL.",
-        "D) Linguagem CQL (Cassandra Query Language), inspirada em XML."
-      ],
-      "respostaCorreta": 2,
-      "dica": "O nome dessa linguagem lembra a palavra 'cifra' em inglês e utiliza cláusulas familiares de bancos relacionais (como WHERE e ORDER BY).",
-      "explicacao": "O Neo4j utiliza a linguagem declarativa Cypher, cujas palavras-chave e cláusulas foram inspiradas na SQL.",
-      "fonte": "Modelagem de Dados NoSQL: Uma Modelagem de Banco de Dados de Grafos para Persistência de Dados de Pesquisa",
-      "urlFonte": "https://journals-sol.sbc.org.br/index.php/reic/article/view/4796"
-    },
-    {
-      "id": 3,
-      "pergunta": "Qual restrição do modelo relacional garante a consistência entre tabelas ao assegurar que uma tupla em uma relação, ao fazer referência a outra tabela, refira-se a um registro realmente existente (ou possua valor nulo)?",
-      "opcoes": [
-        "A) Restrição de Integridade de Entidade.",
-        "B) Restrição de Integridade Referencial.",
-        "C) Restrição de Domínio.",
-        "D) Restrição de Independência Física de Dados."
-      ],
-      "respostaCorreta": 1,
-      "dica": "Pense na regra do modelo relacional que governa diretamente o relacionamento mantido por meio de chaves estrangeiras (foreign keys).",
-      "explicacao": "A integridade referencial assegura a consistência das conexões entre tabelas, garantindo que valores de chaves estrangeiras apontem obrigatoriamente para chaves primárias existentes.",
-      "fonte": "Sistema de Banco de Dados (Navathe & Elmasri)",
-      "urlFonte": "https://www.kufunda.net/publicdocs/Sistemas%20de%20Banco%20de%20Dados%20(Ramez%20Elmasri,%20Shamkant%20B.%20Navathe).pdf"
-    }
+  {
+    "id": 1,
+    "pergunta": "O que caracteriza o conceito de independência programa-dados nos Sistemas de Gerenciamento de Banco de Dados (SGBD)?",
+    "opcoes": [
+      "A) A capacidade de alterar o código dos programas de aplicação sem afetar o hardware onde o banco de dados está instalado.",
+      "B) A capacidade de manter a estrutura e a definição dos dados armazenadas no catálogo do SGBD separadamente do código dos programas, permitindo alterar a estrutura física dos dados sem requerer modificações nos programas de aplicação.",
+      "C) A exigência de que as definições de todos os tipos de dados fiquem codificadas diretamente dentro do código-fonte de cada programa.",
+      "D) O mecanismo de controle de concorrência que impede que múltiplos usuários leiam o mesmo arquivo de dados simultaneamente."
+    ],
+    "respostaCorreta": 1,
+    "dica": "Lembre-se de onde fica mantida a definição dos dados no ambiente SGBD — se fica embutida no código-fonte dos programas ou centralizada no catálogo do sistema.",
+    "explicacao": "No processamento tradicional de arquivos, a estrutura ficava presa a cada programa. No SGBD, a estrutura dos arquivos é salva no catálogo (metadados) de forma independente.",
+    "fonte": "Sistema de Banco de Dados (Navathe & Elmasri)",
+    "urlFonte": "https://www.kufunda.net/publicdocs/Sistemas%20de%20Banco%20de%20Dados%20(Ramez%20Elmasri,%20Shamkant%20B.%20Navathe).pdf"
+  },
+  {
+    "id": 2,
+    "pergunta": "No âmbito dos bancos de dados NoSQL orientados a grafos, qual é a linguagem de consulta declarativa utilizada pelo Neo4j e em qual linguagem tradicional de banco de dados ela se inspira para suas palavras-chave?",
+    "opcoes": [
+      "A) Linguagem SPARQL, inspirada em C++.",
+      "B) Linguagem Gremlin, inspirada no modelo hierárquico.",
+      "C) Linguagem Cypher, inspirada na SQL.",
+      "D) Linguagem CQL (Cassandra Query Language), inspirada em XML."
+    ],
+    "respostaCorreta": 2,
+    "dica": "O nome dessa linguagem lembra a palavra 'cifra' em inglês e utiliza cláusulas familiares de bancos relacionais (como WHERE e ORDER BY).",
+    "explicacao": "O Neo4j utiliza a linguagem declarativa Cypher, cujas palavras-chave e cláusulas foram inspiradas na SQL.",
+    "fonte": "Modelagem de Dados NoSQL: Uma Modelagem de Banco de Dados de Grafos para Persistência de Dados de Pesquisa",
+    "urlFonte": "https://journals-sol.sbc.org.br/index.php/reic/article/view/4796"
+  },
+  {
+    "id": 3,
+    "pergunta": "Qual restrição do modelo relacional garante a consistência entre tabelas ao assegurar que uma tupla em uma relação, ao fazer referência a outra tabela, refira-se a um registro realmente existente (ou possua valor nulo)?",
+    "opcoes": [
+      "A) Restrição de Integridade de Entidade.",
+      "B) Restrição de Integridade Referencial.",
+      "C) Restrição de Domínio.",
+      "D) Restrição de Independência Física de Dados."
+    ],
+    "respostaCorreta": 1,
+    "dica": "Pense na regra do modelo relacional que governa diretamente o relacionamento mantido por meio de chaves estrangeiras (foreign keys).",
+    "explicacao": "A integridade referencial assegura a consistência das conexões entre tabelas, garantindo que valores de chaves estrangeiras apontem obrigatoriamente para chaves primárias existentes.",
+    "fonte": "Sistema de Banco de Dados (Navathe & Elmasri)",
+    "urlFonte": "https://www.kufunda.net/publicdocs/Sistemas%20de%20Banco%20de%20Dados%20(Ramez%20Elmasri,%20Shamkant%20B.%20Navathe).pdf"
+  },
+  {
+    "id": 4,
+    "pergunta": "Em bancos de dados relacionais, qual propriedade do acrônimo ACID garante que uma transação seja executada por completo ou, em caso de falha, tenha todas as suas operações desfeitas (rollback)?",
+    "opcoes": [
+      "A) Consistência (Consistency).",
+      "B) Isolamento (Isolation).",
+      "C) Atomicidade (Atomicity).",
+      "D) Durabilidade (Durability)."
+    ],
+    "respostaCorreta": 2,
+    "dica": "É conhecida como a regra do 'tudo ou nada' no processamento de transações.",
+    "explicacao": "A atomicidade assegura que a transação seja tratada como uma unidade indivisível de trabalho: ou todas as alterações são confirmadas (COMMIT) ou nenhuma é aplicada (ROLLBACK).",
+    "fonte": "Documentação Oficial PostgreSQL — Transações",
+    "urlFonte": "https://www.postgresql.org/docs/current/tutorial-transactions.html"
+  },
+  {
+    "id": 5,
+    "pergunta": "Na normalização de bancos de dados relacionais, o que é exigido para que uma tabela esteja na Primeira Forma Normal (1FN)?",
+    "opcoes": [
+      "A) Eliminar todas as dependências transitivas entre atributos não-chave.",
+      "B) Garantir que todos os atributos contenham apenas valores atômicos (indivisíveis), sem grupos repetitivos ou colunas multivaloradas.",
+      "C) Remover todas as chaves estrangeiras da tabela principal.",
+      "D) Dividir a tabela em duas sempre que houver mais de cinco colunas."
+    ],
+    "respostaCorreta": 1,
+    "dica": "Pense na regra básica sobre não armazenar listas ou múltiplos valores dentro de uma única célula da tabela.",
+    "explicacao": "A 1FN proíbe atributos multivalorados, atributos compostos e suas combinações, exigindo que cada coluna armazene apenas um único valor atômico por linha.",
+    "fonte": "Microsoft Learn — Descrição dos conceitos básicos de normalização de banco de dados",
+    "urlFonte": "https://learn.microsoft.com/pt-br/office/troubleshoot/access/database-normalization-description"
+  },
+  {
+    "id": 6,
+    "pergunta": "Dentro da linguagem SQL, em qual subconjunto de comandos se enquadram as instruções CREATE, ALTER e DROP?",
+    "opcoes": [
+      "A) DML (Data Manipulation Language).",
+      "B) DCL (Data Control Language).",
+      "C) DDL (Data Definition Language).",
+      "D) DQL (Data Query Language)."
+    ],
+    "respostaCorreta": 2,
+    "dica": "Esses comandos são responsáveis por criar, modificar e excluir a estrutura dos objetos do banco (como tabelas e esquemas).",
+    "explicacao": "A DDL (Linguagem de Definição de Dados) reúne os comandos que definem e alteram o esquema e a estrutura física/lógica do banco de dados, diferentemente da DML (INSERT, UPDATE, DELETE).",
+    "fonte": "Documentação Oficial MySQL — Data Definition Statements",
+    "urlFonte": "https://dev.mysql.com/doc/refman/8.0/en/sql-data-definition-statements.html"
+  },
+  {
+    "id": 7,
+    "pergunta": "Qual é a principal finalidade da criação de um índice (INDEX) em uma coluna de uma tabela relacional?",
+    "opcoes": [
+      "A) Criptografar automaticamente os dados armazenados na coluna.",
+      "B) Acelerar a velocidade das operações de busca e consulta (SELECT), evitando a leitura sequencial completa da tabela (Full Table Scan).",
+      "C) Impedir que registros duplicados sejam inseridos em qualquer coluna da tabela.",
+      "D) Reduzir o espaço ocupado em disco pelo banco de dados."
+    ],
+    "respostaCorreta": 1,
+    "dica": "Funciona de maneira semelhante ao índice remissivo de um livro, apontando diretamente onde o registro está localizado.",
+    "explicacao": "Índices criam estruturas de busca otimizadas (como árvores B-Tree) que permitem ao SGBD localizar linhas rapidamente sem varrer toda a tabela, embora adicionem custo extra em escritas.",
+    "fonte": "Documentação Oficial PostgreSQL — Indexes",
+    "urlFonte": "https://www.postgresql.org/docs/current/indexes-intro.html"
+  },
+  {
+    "id": 8,
+    "pergunta": "Nos bancos de dados NoSQL orientados a documentos, como o MongoDB, em qual formato binário os documentos são armazenados internamente para suportar tipos de dados ricos e leitura rápida?",
+    "opcoes": [
+      "A) CSV (Comma-Separated Values).",
+      "B) BSON (Binary JSON).",
+      "C) YAML (YAML Ain't Markup Language).",
+      "D) Parquet."
+    ],
+    "respostaCorreta": 1,
+    "dica": "É uma extensão binária da notação de objetos JavaScript utilizada na web.",
+    "explicacao": "Embora o usuário interaja com estruturas semelhantes a JSON, o MongoDB armazena os documentos em BSON (Binary JSON), que suporta tipos adicionais como Date, ObjectId e binários.",
+    "fonte": "Documentação Oficial MongoDB — JSON and BSON",
+    "urlFonte": "https://www.mongodb.com/resources/basics/json-and-bson"
+  },
+  {
+    "id": 9,
+    "pergunta": "Na arquitetura de Business Intelligence (BI), qual é a principal diferença entre um ambiente OLTP e um ambiente OLAP (Data Warehouse)?",
+    "opcoes": [
+      "A) OLTP é voltado para análise histórica massiva, enquanto OLAP registra transações operacionais do dia a dia.",
+      "B) OLTP processa transações operacionais rápidas e concorrentes em tempo real, enquanto OLAP é otimizado para consultas analíticas complexas e consolidação de dados históricos.",
+      "C) OLTP funciona apenas com bancos NoSQL, enquanto OLAP exige exclusivamente planilhas.",
+      "D) Não há diferença funcional; são apenas nomes distintos para backup em nuvem."
+    ],
+    "respostaCorreta": 1,
+    "dica": "Observe as letras finais: 'TP' vem de Transaction Processing e 'AP' vem de Analytical Processing.",
+    "explicacao": "Sistemas OLTP dão suporte às operações transacionais cotidianas (vendas, cadastros), enquanto ambientes OLAP consolidam grandes volumes de dados históricos para tomada de decisão.",
+    "fonte": "AWS — O que é a diferença entre OLAP e OLTP?",
+    "urlFonte": "https://aws.amazon.com/pt/compare/the-difference-between-olap-and-oltp/"
+  },
+  {
+    "id": 10,
+    "pergunta": "Em Engenharia de Dados, o que significa a sigla ETL no contexto de integração e pipelines de dados?",
+    "opcoes": [
+      "A) Export, Transfer and Log (Exportação, Transferência e Registro).",
+      "B) Extract, Transform and Load (Extração, Transformação e Carga).",
+      "C) Encrypt, Test and Link (Criptografia, Teste e Vinculação).",
+      "D) Evaluate, Tune and Launch (Avaliação, Ajuste e Lançamento)."
+    ],
+    "respostaCorreta": 1,
+    "dica": "Descreve as três etapas clássicas de tirar dados de fontes diversas, limpá-los/padronizá-los e salvá-los no destino final.",
+    "explicacao": "ETL (Extract, Transform, Load) é o processo de extrair dados de sistemas de origem, transformá-los conforme regras de negócio e qualidade, e carregá-los em um repositório destino como um Data Warehouse.",
+    "fonte": "IBM — O que é ETL (Extrair, Transformar, Carregar)?",
+    "urlFonte": "https://www.ibm.com/br-pt/topics/etl"
+  }
 ]

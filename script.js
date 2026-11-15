@@ -2,6 +2,7 @@ let perguntas = [];
 let atual = 0;
 let acertos = 0;
 let respondida = false;
+let fimDeJogo = false;
 
 const $ = (id) => document.getElementById(id);
 const nomeJogador = sessionStorage.getItem('nomeJogador') || 'Jogador';
@@ -34,6 +35,7 @@ function mostrarPergunta() {
   const textoDica = $('texto-dica');
   btnDica.style.display = 'inline-block';
   btnDica.disabled = false;
+  btnDica.setAttribute('aria-expanded', 'false');
   textoDica.classList.add('escondido');
   textoDica.textContent = p.dica || 'Sem dica disponível para esta pergunta.';
 
@@ -56,7 +58,8 @@ function mostrarPergunta() {
 }
 
 $('btn-dica').addEventListener('click', () => {
-  $('texto-dica').classList.toggle('escondido');
+  const oculto = $('texto-dica').classList.toggle('escondido');
+  $('btn-dica').setAttribute('aria-expanded', !oculto);
 });
 
 function limparFeedback(texto) {
@@ -123,7 +126,18 @@ function responder(escolhida) {
   $('proximo').disabled = false;
 }
 
-function proxima() {
+function avancar() {
+  if (fimDeJogo) {
+    fimDeJogo = false;
+    atual = 0;
+    acertos = 0;
+    respondida = false;
+    $('area-ranking').classList.add('escondido');
+    $('area-dica').style.display = 'block';
+    mostrarPergunta();
+    return;
+  }
+
   if (atual < perguntas.length - 1) {
     atual++;
     mostrarPergunta();
@@ -161,6 +175,7 @@ function salvarERenderizarRanking() {
 }
 
 function mostrarResultado() {
+  fimDeJogo = true;
   $('posicao').textContent = 'Fim do quiz';
   $('pergunta').textContent = `${nomeJogador}, você acertou ${acertos} de ${perguntas.length} perguntas.`;
   $('opcoes').innerHTML = '';
@@ -172,23 +187,8 @@ function mostrarResultado() {
 
   const botao = $('proximo');
   botao.textContent = 'Jogar de novo';
-  
-  const novoBotao = botao.cloneNode(true);
-  $('acoes').replaceChild(novoBotao, botao);
-
-  novoBotao.onclick = () => {
-    atual = 0;
-    acertos = 0;
-    respondida = false;
-
-    $('area-ranking').classList.add('escondido');
-    $('area-dica').style.display = 'block';
-    
-    novoBotao.onclick = proxima;
-    
-    mostrarPergunta();
-  };
+  botao.disabled = false;
 }
 
-$('proximo').addEventListener('click', proxima);
+$('proximo').addEventListener('click', avancar);
 iniciar();
